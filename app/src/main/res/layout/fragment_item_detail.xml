@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blocked"
+            android:id="@+id/isBlocked_cb"
+            android:layout_toStartOf="@+id/phone_editText"
+            android:checked="true" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:layout_above="@+id/bottom_container"
+            android:layout_toLeftOf="@+id/phone_editText"/>
+
+
+    <AutoCompleteTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_editText"
+            android:hint="enter phone"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="search"
+            android:id="@+id/search_btn"
+            android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+
+    <RelativeLayout android:id="@+id/bottom_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phone_editText"
+                    android:visibility="visible">
+        <AutoCompleteTextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/comment_text"
+                android:hint="enter comment"
+                android:layout_alignBottom="@+id/add_btn"
+                />
+
+        <Button style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:id="@+id/add_btn"
+                android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:id="@+id/comments_list"
+            android:layout_alignParentBottom="true" android:layout_toRightOf="@+id/linearLayout"
+            android:layout_toEndOf="@+id/linearLayout"/>
+
+
+    <LinearLayout
+            android:focusable="true" android:focusableInTouchMode="true"
+            android:layout_width="0px" android:layout_height="0px" android:id="@+id/linearLayout"/>
+</RelativeLayout>
